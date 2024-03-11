@@ -70,6 +70,7 @@ export const buildAndroid = async (
     cwd,
     env: {
       ENTRY_FILE,
+      FORCE_BUNDLING: 'true',
     },
   });
 };

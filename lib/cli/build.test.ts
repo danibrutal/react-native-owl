@@ -115,7 +115,7 @@ describe('build.ts', () => {
         {
           stdio: 'inherit',
           cwd: path.join(process.cwd(), 'android'),
-          env: { ENTRY_FILE },
+          env: { ENTRY_FILE, FORCE_BUNDLING: 'true' },
         }
       );
     });
@@ -137,7 +137,7 @@ describe('build.ts', () => {
         {
           stdio: 'inherit',
           cwd: path.join(process.cwd(), 'android'),
-          env: { ENTRY_FILE },
+          env: { ENTRY_FILE, FORCE_BUNDLING: 'true' },
         }
       );
     });
@@ -158,7 +158,7 @@ describe('build.ts', () => {
         `echo 'Hello World' -PisOwlBuild=true`,
         {
           stdio: 'inherit',
-          env: { ENTRY_FILE },
+          env: { ENTRY_FILE, FORCE_BUNDLING: 'true' },
         }
       );
     });
